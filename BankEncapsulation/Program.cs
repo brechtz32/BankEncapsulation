@@ -1,10 +1,17 @@
-﻿namespace BankEncapsulation
+﻿using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
+
+namespace BankEncapsulation
 {
     public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var account = new BankAccount();
+
+            account.Deposit();
+            Console.WriteLine($"Your ballance is ${account.GetBalance()}");               
+            
         }
     }
 }
